@@ -7,7 +7,7 @@ import product4 from '../images/image-product-4.jpg'
 
 function Hero() {
   return (
-    <div className='pt-16'>
+    <div className='pt-16 bg-center'>
         <Carousel>
              <img className=''src={product1} />
              <img className=''src={product2} />
