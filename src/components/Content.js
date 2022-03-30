@@ -7,7 +7,7 @@ function Content({ price, discount, addToCart, cart, product, deleteFromCart }) 
  
  
   return (
-    <div className='mx-10'>
+    <div className='mx-8 my-16'>
         <h1 className=' mt-4 uppercase font-bold text-amber-500 text-xs tracking-[1px]'>sneaker company</h1>
         <h2 className=' mt-2 capitalize font-bold text-2xl'>Fall limited edition sneakers</h2>
         <p className=' pr-5 mt-5'>These low-profile sneakers are your 
