@@ -6,7 +6,7 @@ import CartItem from './CartItem'
 function Cart({cart, price, discount, emptyCart }) {
  
   return (  
-    <div className='h-72 w-[350px] z-30 mx-3 mt-16 bg-white fixed rounded-2xl'>
+    <div className='h-72 w-[350px] z-30 mx-3 mt-16 bg-white fixed rounded-2xl lg:ml-[1200px] border-2 border-solid shadow-2xl'>
         <h4 className='mx-10 my-10 font-bold'>Cart</h4>
         <hr/>
         {

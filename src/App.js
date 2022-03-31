@@ -37,20 +37,21 @@ function App() {
     <div className="App">
       {products.map((product, index) => (
       <Navbar key={index} cart={cart} deleteFromCart={handleRemoveFromCart} price={product.price} discount={product.discount} emptyCart={handleEmptyCart} />
-      ))}   
-      <Hero /> 
-      {products.map((product, index) => (
-        <Content 
-        key={index} 
-        price={product.price} 
-        discount={product.discount}  
-        addToCart={handleAddToCart} 
-        cart={cart} 
-        product={product}
-        deleteFromCart={handleRemoveFromCart}
-        /> 
-            
-      ))}
+      ))}  
+      <div className='lg:flex'> 
+        <Hero /> 
+        {products.map((product, index) => (
+          <Content 
+          key={index} 
+          price={product.price} 
+          discount={product.discount}  
+          addToCart={handleAddToCart} 
+          cart={cart} 
+          product={product}
+          deleteFromCart={handleRemoveFromCart}
+          /> 
+          ))}
+      </div>    
                         
     </div>
   );
