@@ -10,6 +10,7 @@ function Hero() {
 
   return (
     <div>
+      
       <div className=' bg-center w-full h-80 bg-orange-500 lg:hidden'>
             <div className='h-10'></div>
             <div className='w-full h-full bg-center bg-cover flex justify-between' style={{backgroundImage: `url(${images[currImg].img})`}}>

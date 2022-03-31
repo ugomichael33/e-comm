@@ -18,7 +18,7 @@ function Content({ price, discount, addToCart, cart, product, deleteFromCart }) 
         </p>
         <div className='flex justify-between mt-10 items-center lg:justify-start'>
           <strong><p className='text-3xl'>${actualPrice}</p></strong>
-          <p className='lg:ml-10'>{discount}%</p>
+          <p className='lg:ml-10 font-bold text-orange-600 bg-orange-200 w-12 rounded-md'>{discount}%</p>
           <p className='line-through lg:hidden'>${price}</p>
         </div>
         <p className='price line-through mt-3'>${price}</p>
