@@ -5,6 +5,7 @@ import next from '../images/icon-next.svg'
 import previous from '../images/icon-previous.svg'
 import './hero.css'
 
+
 function Hero() {
   const [ currImg, setCurrImg ] = useState(0)
 
@@ -21,7 +22,6 @@ function Hero() {
       <div className='large h-60 w-3/4 ml-60 mt-36'>
         <img className='rounded-2xl' src={images[0].img} />
         <div className='h-[200px] w-full flex justify-between '>
-          {console.log(thumbnailImages)}
           {thumbnailImages.map((img, index) => 
             <img className='h-20 w-20 block mt-10 rounded-2xl' src={img} key={index} />
           )}

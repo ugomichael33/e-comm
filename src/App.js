@@ -2,12 +2,16 @@ import React, { useState } from 'react';
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Content from './components/Content';
-
+import Products from './components/Products';
+import { thumbnailImages } from './components/carouseldata';
 import './App.css';
+import { images } from './components/carouseldata';
 
 
 function App() {
   const [ cart, setCart ] = useState([])
+  const [ currImg, setCurrImg ] = useState(1)
+  const [ selected, setSelected ] = useState(true)
   const [ products ] = useState([
     {
   price: 250,
@@ -31,13 +35,37 @@ function App() {
     console.log(filledCart.length)
     setCart(filledCart)
   }
+
+  const toggleSelect = () => {
+    setSelected(!selected)
+  }
   
+  const selectNextImage = () => {
+    if (currImg < images.length -1){
+      setCurrImg(currImg +1)
+    } 
+  }
+
+  const selectPreviousImage = () => {
+    if (currImg > 0) {
+      setCurrImg(currImg -1)
+    }
+  }
 
   return (
-    <div className="App">
+    <div className="App"> 
       {products.map((product, index) => (
       <Navbar key={index} cart={cart} deleteFromCart={handleRemoveFromCart} price={product.price} discount={product.discount} emptyCart={handleEmptyCart} />
       ))}  
+      { selected && 
+        <Products 
+          currImg={currImg} 
+          images={images} 
+          thumbnailImages={thumbnailImages} 
+          toggleSelect={toggleSelect} 
+          selectNextImage={selectNextImage}
+          selectPreviousImage={selectPreviousImage}
+        />}
       <div className='lg:flex'> 
         <Hero /> 
         {products.map((product, index) => (
