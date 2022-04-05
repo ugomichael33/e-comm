@@ -18,7 +18,7 @@ function Products({ currImg, images, toggleSelect, selectNextImage, selectPrevio
     }
 
   return (
-    <div className='products'>
+    <div className='products mx-auto'>
         <div className=' w-screen h-screen bg-black z-20 fixed opacity-60'>
             
         </div>

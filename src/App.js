@@ -58,7 +58,7 @@ function App() {
   }
 
   return (
-    <div className="App"> 
+    <div className="App mx-auto"> 
       {products.map((product, index) => (
       <Navbar key={index} cart={cart} deleteFromCart={handleRemoveFromCart} price={product.price} discount={product.discount} emptyCart={handleEmptyCart} />
       ))}  
