@@ -10,7 +10,7 @@ import { images } from './components/carouseldata';
 
 function App() {
   const [ cart, setCart ] = useState([])
-  const [ currImg, setCurrImg ] = useState(1)
+  const [ currImg, setCurrImg ] = useState(0)
   const [ selected, setSelected ] = useState(false)
   const [ products ] = useState([
     {
@@ -48,6 +48,7 @@ function App() {
   const selectNextImage = () => {
     if (currImg < images.length -1){
       setCurrImg(currImg +1)
+      console.log(currImg)
     } 
   }
 
@@ -72,7 +73,9 @@ function App() {
           selectPreviousImage={selectPreviousImage}
         />}
       <div className='lg:flex'> 
-        <Hero  handleSelectedImage={handleSelectedImage} /> 
+        <Hero  
+          handleSelectedImage={handleSelectedImage}  
+        /> 
         {products.map((product, index) => (
           <Content 
           key={index} 

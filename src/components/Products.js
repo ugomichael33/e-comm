@@ -4,8 +4,19 @@ import previous from '../images/icon-previous.svg'
 import close from '../images/icon-close.svg'
 import './products.css'
 
-function Products({ currImg, images, thumbnailImages, toggleSelect, selectNextImage, selectPreviousImage,  }) {
+function Products({ currImg, images, toggleSelect, selectNextImage, selectPreviousImage }) {
     const [ selectedImages, setSelectedImages ] = useState(images[currImg])
+
+    const handleSelectNext = () => {
+    selectNextImage()
+    setSelectedImages(images[currImg])
+    }
+
+    const handleSelectPrevious = () => {
+    selectPreviousImage()
+    setSelectedImages(images[currImg])
+    }
+
   return (
     <div className='products'>
         <div className=' w-screen h-screen bg-black z-20 fixed opacity-60'>
@@ -16,8 +27,8 @@ function Products({ currImg, images, thumbnailImages, toggleSelect, selectNextIm
                     <div className='z-40 '>
                         <img src={close}  onClick={()=>toggleSelect()} className='mt-14 ml-[980px] h-5 w-5 cursor-pointer text-xl fixed'/> 
                     </div>
-                    <div className='ml-[535px] mt-80 w-8 h-8 rounded-2xl bg-white absolute fixed z-40 cursor-pointer' onClick={() => selectPreviousImage()}><img className='ml-2 mt-2' src={previous} /></div>
-                    <div className='ml-[983px] mt-80 w-8 h-8 rounded-2xl bg-white absolute fixed z-40 cursor-pointer' onClick={() => selectNextImage()}><img className='ml-2 mt-2' src={next} /></div>
+                    <div className='ml-[535px] mt-80 w-8 h-8 rounded-2xl bg-white absolute fixed z-40 cursor-pointer' onClick={() => handleSelectPrevious()}><img className='ml-2 mt-2' src={previous} /></div>
+                    <div className='ml-[983px] mt-80 w-8 h-8 rounded-2xl bg-white absolute fixed z-40 cursor-pointer' onClick={() => handleSelectNext()}><img className='ml-2 mt-2' src={next} /></div>
                     <img className='h-[500px] w-[450px] fixed z-30 mt-24 ml-[550px] rounded-2xl object-center ' src={ selectedImages } />
             </div>
             <div className='h-[200px] w-full flex fixed z-30 ml-[510px]'>
