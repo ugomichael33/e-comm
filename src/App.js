@@ -48,7 +48,6 @@ function App() {
   const selectNextImage = () => {
     if (currImg < images.length -1){
       setCurrImg(currImg +1)
-      console.log(currImg)
     } 
   }
 
