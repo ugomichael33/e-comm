@@ -37,7 +37,12 @@ function App() {
   }
 
   const toggleSelect = () => {
-    setSelected(!selected)
+    setSelected(prevState => !prevState)
+  }
+
+  const handleSelectedImage = (index) => {
+    setCurrImg(index)
+    setSelected( prevState => !prevState)
   }
   
   const selectNextImage = () => {
@@ -67,7 +72,7 @@ function App() {
           selectPreviousImage={selectPreviousImage}
         />}
       <div className='lg:flex'> 
-        <Hero /> 
+        <Hero  handleSelectedImage={handleSelectedImage} /> 
         {products.map((product, index) => (
           <Content 
           key={index} 

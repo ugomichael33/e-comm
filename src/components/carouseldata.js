@@ -7,24 +7,8 @@ import thumbnail2 from '../images/thumbnail2.jpg'
 import thumbnail3 from '../images/thumbnail3.jpg'
 import thumbnail4 from '../images/thumbnail4.jpg'
 
-export const images = [
-    {
-        img: product1,
-        title: 'sneaker'
-    },
-    {
-        img: product2,
-        title: 'sneaker1'
-    },
-    {
-        img: product3,
-        title: 'sneaker2'
-    },
-    {
-        img: product4,
-        title: 'sneaker3'
-    }
-]
+export const images = [ product1, product2, product3, product4 ]
+console.log(images[1])
 
 export const thumbnailImages = [
     thumbnail1,

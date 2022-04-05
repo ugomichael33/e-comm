@@ -24,9 +24,9 @@ function Content({ price, discount, addToCart, cart, product, deleteFromCart }) 
         <p className='price line-through mt-3'>${price}</p>
         <div className='lg:flex'>
           <div className='flex justify-between mt-10 h-12 bg-slate-100 items-center rounded-2xl lg:ml-0'>
-            <img onClick={()=>deleteFromCart()} className='h-2 w-4 mx-5' src={minus} alt='' />
+            <img onClick={()=>deleteFromCart()} className='h-2 w-4 mx-5 cursor-pointer' src={minus} alt='' />
             <p>{cart.length}</p>
-            <img onClick={() => addToCart(product)} className='h-3 w-4 mx-5' src={plus} alt='' />
+            <img onClick={() => addToCart(product)} className='h-3 w-4 mx-5 cursor-pointer' src={plus} alt='' />
           </div>
           <button onClick={() => addToCart(product)} className='mt-5 h-12 w-full bg-orange-500 mb-20 rounded-2xl text-white lg:w-72 lg:ml-4 lg:mt-10'>Add to cart</button>
         </div>
