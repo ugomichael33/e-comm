@@ -7,7 +7,7 @@ import './hero.css'
 
 
 function Hero({ handleSelectedImage }) {
-  const [ currImg, setCurrImg ] = useState(1)
+  const [ currImg, setCurrImg ] = useState(0)
   
   return (
     <div> 

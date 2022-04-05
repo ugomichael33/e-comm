@@ -11,7 +11,7 @@ import { images } from './components/carouseldata';
 function App() {
   const [ cart, setCart ] = useState([])
   const [ currImg, setCurrImg ] = useState(1)
-  const [ selected, setSelected ] = useState(true)
+  const [ selected, setSelected ] = useState(false)
   const [ products ] = useState([
     {
   price: 250,
