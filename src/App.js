@@ -59,9 +59,6 @@ function App() {
 
   return (
     <div className="App mx-auto"> 
-      {products.map((product, index) => (
-      <Navbar key={index} cart={cart} deleteFromCart={handleRemoveFromCart} price={product.price} discount={product.discount} emptyCart={handleEmptyCart} />
-      ))}  
       { selected && 
         <Products 
           currImg={currImg} 
@@ -71,6 +68,10 @@ function App() {
           selectNextImage={selectNextImage}
           selectPreviousImage={selectPreviousImage}
         />}
+      {products.map((product, index) => (
+      <Navbar key={index} cart={cart} deleteFromCart={handleRemoveFromCart} price={product.price} discount={product.discount} emptyCart={handleEmptyCart} />
+      ))}  
+      
       <div className='lg:flex'> 
         <Hero  
           handleSelectedImage={handleSelectedImage}  

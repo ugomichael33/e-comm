@@ -8,10 +8,10 @@ function Content({ price, discount, addToCart, cart, product, deleteFromCart }) 
  
  
   return (
-    <div className='mx-8 my-16 lg:ml-80 lg:mr-64 lg:mt-48'>
-        <h1 className=' mt-4 uppercase font-bold text-amber-500 text-xs tracking-[1px]'>sneaker company</h1>
-        <h2 className=' mt-2 capitalize font-bold text-2xl lg:text-4xl lg:mr-10'>Fall limited edition sneakers</h2>
-        <p className=' pr-5 mt-5'>These low-profile sneakers are your 
+    <div className='mx-8 my-16 lg:ml-60 lg:mt-28'>
+        <h1 className=' mt-4 uppercase font-bold text-amber-500 text-xs tracking-[1px] '>sneaker company</h1>
+        <h2 className=' mt-2 capitalize font-bold text-2xl lg:text-4xl lg:mr-10 lg:w-96'>Fall limited edition sneakers</h2>
+        <p className=' pr-5 mt-5 text-base lg:mr-40'>These low-profile sneakers are your 
             perfect casual wear companion.
             Featuring a durable rubber outer sole, 
             they'll withstand everything the weather can offer.
